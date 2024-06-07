@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Informatics 23/24 - Project #2</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Informatics 23/24 - Project #2</h1>
+    <h2>Todo Management</h2>
+    <h3>Add Person</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addPerson()">
+        <input type="text" id="add-name" placeholder="New name">
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editForm" style="display: none;">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updatePerson()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        <tbody id="people"></tbody>
+    </table>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getPeople();
+    </script>
+</body>
+</html>
+
