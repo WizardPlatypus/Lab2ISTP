@@ -7,7 +7,6 @@ namespace Todo.Models
         public virtual DbSet<Task> Tasks { get; set; }
         public virtual DbSet<Person> People { get; set; }
         public TodoContext(DbContextOptions<TodoContext> options) : base(options) {
-            Console.WriteLine("BOOOP");
             Database.EnsureCreated();
         }
     }
